@@ -76,4 +76,16 @@ public class LineString implements GraphicalPrimitive, Iterable<Point> {
         }
         return b;
     }
+    
+    public LineString(String s,Color color){
+    	this(color);
+    	s = s.substring(11, s.length()- 1);
+    	String[] coords = s.split(",");
+    	for(String coord : coords){
+    		String[] SplitCoord = coord.split(" ");
+    		float X = Float.parseFloat(SplitCoord[0]);
+    		float Y = Float.parseFloat(SplitCoord[1]);
+    		addPoint(new Point(X,Y));
+    	}
+    }
 }

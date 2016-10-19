@@ -44,7 +44,7 @@ public class CoordinateConverter {
      * @return  the coordinate converted to the screen reference.
      */
     public int yMapToScreen(double y) {
-        return this.screenHeight - ((int) ((y - this.yBottom) * this.screenHeight / this.mapHeight));
+        return - this.screenHeight - ((int) ((y - this.yBottom) * this.screenHeight / this.mapHeight));
     }
 
      /**
@@ -68,7 +68,7 @@ public class CoordinateConverter {
     /**
      * Converts an x distance from the screen reference to the map reference (the only difference with
      * xScreenToMap is that it does not take into account the origin of the map reference.
-     * @param dx the distance to convert (in the screen reference)
+     * @param dx the distance to cWHERE ST_Intersects(ST_MakeEnvelope(5.7, 45.1, 5.8, 45.2, 4326), ST_Transformonvert (in the screen reference)
      * @return  the distance converted to the map reference.
      */
     public double dxScreenToMap(int dx) {
